@@ -378,6 +378,10 @@ textarea {
 
   /* main */
 
+  .main .content-main figure {
+    display: none;
+  }
+
   .main .content-main article:first-child {
     position: relative;
     background: url("../img/principal-concibe.jpg") no-repeat 100% 0%;
