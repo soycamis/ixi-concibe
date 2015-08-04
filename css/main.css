@@ -131,6 +131,10 @@ textarea {
     background: tomato;
    }
 
+   .header-info {
+    display: none;
+   }
+
    /* main */
 
    .button {
