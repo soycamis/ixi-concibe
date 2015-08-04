@@ -378,7 +378,7 @@ textarea {
 
   /* main */
 
-  .main .content-main figure {
+  .main .content-main + figure {
     display: none;
   }
 
