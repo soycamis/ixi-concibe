@@ -341,7 +341,8 @@ textarea {
 @media only screen and (min-width: 768px) {
   .content-header,
   .content-main,
-  .content-extra {
+  .content-extra,
+  .content-footer {
     max-width: 960px;
     margin: 0 auto;
   }
@@ -474,7 +475,7 @@ textarea {
     margin:0 50px;
   }
 
-  footer {
+  .content-footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
