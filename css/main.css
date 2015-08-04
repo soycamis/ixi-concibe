@@ -125,6 +125,10 @@ textarea {
     margin: 0;
    }
 
+   header {
+    background: #CCE6F8 url("http://concibe.com.mx/wp-content/themes/concibe/imgs/shine_header.png") repeat-x;
+   }
+
    /* nav example */
    nav {
     height: 50px;
@@ -367,14 +371,20 @@ textarea {
     justify-content:flex-end;
   }
 
-  .content-header .header-info a {
+  .content-header .header-info img {
     margin: 0 10px;
+  }
+
+  .content-header .header-info a:nth-child(3) {
+    border-right: 1px solid #3DA8CB;
+    border-left: 1px solid #3DA8CB;
+    padding-right: 10px;
   }
 
   .content-header .header-info p {
     font-style: italic;
     font-size: .8rem;
-    margin: 0;
+    margin: 5px 0 0 0;
   }
 
   /* main */
