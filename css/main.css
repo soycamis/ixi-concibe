@@ -105,7 +105,11 @@ textarea {
         font-style: normal;
     }
 
-   body {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
     font-family: "Verdana";
     font-size: .8rem;
     text-align: center;
@@ -114,7 +118,7 @@ textarea {
     /* flex */
     display: flex;
     flex-direction: column;
-   }
+  }
 
    a {
     text-decoration: none;
@@ -129,10 +133,71 @@ textarea {
     background: #CCE6F8 url("http://concibe.com.mx/wp-content/themes/concibe/imgs/shine_header.png") repeat-x;
    }
 
-   /* nav example */
+   /* nav */
    nav {
-    height: 50px;
-    background: tomato;
+    background: #d6ebfc;
+   }
+
+   .nav-responsive {
+    padding: 15px;
+    text-align: left;
+   }
+
+   .nav-responsive a{
+    overflow: hidden;
+    color: #3E546E;
+    font-size: 1.3rem;
+   }
+
+   .nav-responsive .icon-menu2 {
+    float: right;
+    font-size: 1.8rem;
+   }
+
+   .nav {
+    display: none;
+   }
+
+   .nav .nav-menu {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+   }
+  
+   .nav .nav-menu li,
+   .nav .nav-menu .nav-submenu li {
+    list-style: none;
+    border-bottom: 1px solid #92cbfb;
+   }
+
+   .nav .nav-menu li a,
+   .nav .nav-menu .nav-submenu li a {
+    color: #3E546E;
+    padding: 1rem;
+    display: block;
+   }
+
+   .nav .nav-menu li a:hover {
+    background: #fff;
+    transition: all 0.3s ease 0s;
+   }
+
+   /* submenu */
+
+   .nav .nav-menu .nav-submenu {
+    margin: 0;
+    padding: 0;
+   }
+
+   .nav .nav-menu .nav-submenu {
+    display: none;
+    background: #C1E3FD;
+   }
+
+   .nav .nav-menu li:hover .nav-submenu {
+    display: block;
    }
 
    .header-info {
@@ -345,11 +410,14 @@ textarea {
 @media only screen and (min-width: 768px) {
   .content-header,
   .content-main,
+  .content-nav,
   .content-extra,
   .content-footer {
     max-width: 960px;
     margin: 0 auto;
   }
+
+
 
   /* header */
 
@@ -466,6 +534,55 @@ textarea {
   .content-header .header-logo {
     flex-basis: 0;
   }
+
+  /* nav */
+
+  .nav-responsive {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .nav .nav-menu {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .nav .nav-menu li {
+    flex-grow: 1;
+  }
+
+  .nav .nav-menu li {
+    position: relative;
+  }
+
+   .nav .nav-menu li a {
+    padding: 1rem;
+    display: block;
+   }
+
+   .nav .nav-menu li a:hover {
+    background: #fff;
+    border-bottom: #fff;
+   }
+
+   .nav .nav-menu .nav-submenu {
+    position: absolute;
+    z-index: 1000;
+    width: 15rem;
+   }
+
+   .nav .nav-menu .nav-submenu li {
+    border-left: 1px solid #92cbfb;
+    border-right: 1px solid #92cbfb;
+    border-bottom: 1px solid #92cbfb;
+   }
+
+   .nav .nav-menu .nav-submenu li a {
+    padding: .8rem;
+   }
 
   /* extra */
   .extra .content-extra .extra-widgets {
